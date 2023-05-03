@@ -1,0 +1,196 @@
+﻿@model IEnumerable<MoviesApp.Models.Film>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Released)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Runtime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Language)
+            </th>
+            @*<th>
+            @Html.DisplayNameFor(model => model.Director)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Writer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Actors)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plot)
+        </th>*@
+
+            @*<th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Awards)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Poster)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Metascore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImdbRating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImdbVotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ImdbId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Response)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Images0)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Images1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Images2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Images3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Images4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalSeasons)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComingSoon)
+        </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Released)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Runtime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Genre)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Language)
+            </td>
+            @* <td>
+                @Html.DisplayFor(modelItem => item.Director)
+            </td>
+                <td>
+            @Html.DisplayFor(modelItem => item.Writer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Actors)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Awards)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Poster)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Metascore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImdbRating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImdbVotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImdbId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Response)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Images0)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Images1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Images2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Images3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Images4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TotalSeasons)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ComingSoon)
+        </td>*@
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"  class="btn btn-primary">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id"  class="btn btn-warning">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id"  class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
